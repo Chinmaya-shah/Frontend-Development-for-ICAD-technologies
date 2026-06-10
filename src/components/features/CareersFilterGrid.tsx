@@ -1,14 +1,13 @@
 "use client";
  
 import React, { useState } from "react";
-import { Search, MapPin, Clock, ArrowRight, X, Upload, CheckCircle, Send } from "lucide-react";
-import { jobOpenings, locationsList, departmentsList } from "@/data/careers";
+import { Search, Clock, ArrowRight, X, Upload, CheckCircle, Send } from "lucide-react";
+import { jobOpenings, departmentsList } from "@/data/careers";
 import Button from "@/components/ui/Button";
  
 export default function CareersFilterGrid() {
   const [searchQuery, setSearchQuery] = useState("");
   const [activeDepartment, setActiveDepartment] = useState("All Departments");
-  const [activeLocation, setActiveLocation] = useState("All Locations");
   
   // Modal Apply States
   const [selectedJob, setSelectedJob] = useState<typeof jobOpenings[0] | null>(null);
@@ -58,19 +57,13 @@ export default function CareersFilterGrid() {
   const filteredJobs = jobOpenings.filter((job) => {
     const matchesSearch =
       job.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      job.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      job.location.toLowerCase().includes(searchQuery.toLowerCase());
+      job.department.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesDepartment =
       activeDepartment === "All Departments" ||
       job.department.toLowerCase() === activeDepartment.toLowerCase();
 
-    const matchesLocation =
-      activeLocation === "All Locations" ||
-      job.location.toLowerCase().includes(activeLocation.toLowerCase()) ||
-      (activeLocation.toLowerCase() === "remote" && job.location.toLowerCase().includes("remote"));
-
-    return matchesSearch && matchesDepartment && matchesLocation;
+    return matchesSearch && matchesDepartment;
   });
 
   return (
@@ -91,7 +84,7 @@ export default function CareersFilterGrid() {
         </div>
 
         {/* Filters and Search Bar */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-md items-center bg-surface-container-low p-md rounded-3xl border border-outline-variant/30 neumorphic-raised">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-md items-center bg-surface-container-low p-md rounded-3xl border border-outline-variant/30 neumorphic-raised">
           {/* Search Input */}
           <div className="relative md:col-span-2">
             <Search className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 text-outline" />
@@ -119,22 +112,6 @@ export default function CareersFilterGrid() {
             </select>
             <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none border-l-4 border-r-4 border-t-4 border-transparent border-t-outline-variant"></div>
           </div>
-
-          {/* Location Filter */}
-          <div className="relative">
-            <select
-              value={activeLocation}
-              onChange={(e) => setActiveLocation(e.target.value)}
-              className="w-full px-4 py-2.5 bg-white dark:bg-primary-container border border-outline-variant rounded-full text-label-md focus:outline-none focus:border-primary cursor-pointer text-on-surface dark:text-on-primary dark:border-primary-fixed-dim/20 appearance-none"
-            >
-              {locationsList.map((loc, idx) => (
-                <option key={idx} value={loc}>
-                  {loc}
-                </option>
-              ))}
-            </select>
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none border-l-4 border-r-4 border-t-4 border-transparent border-t-outline-variant"></div>
-          </div>
         </div>
 
         {/* Jobs Grid */}
@@ -144,7 +121,7 @@ export default function CareersFilterGrid() {
               No Openings Found
             </h3>
             <p className="text-on-surface-variant dark:text-on-primary-container/85 max-w-md mx-auto text-body-md">
-              We couldn't find any positions matching your filters. Try adjusting your search query or department/location filters.
+              We couldn't find any positions matching your filters. Try adjusting your search query or department filters.
             </p>
           </div>
         ) : (
@@ -167,10 +144,7 @@ export default function CareersFilterGrid() {
                   <h3 className="text-headline-md font-headline-md text-primary dark:text-on-primary leading-snug">
                     {job.title}
                   </h3>
-                  <div className="flex items-center gap-2 text-on-surface-variant dark:text-on-primary-container/80 text-label-md">
-                    <MapPin className="w-4 h-4 text-secondary" />
-                    <span>{job.location}</span>
-                  </div>
+
                 </div>
 
                 <div className="pt-lg border-t border-outline/30 mt-auto flex items-center justify-between">
@@ -224,7 +198,7 @@ export default function CareersFilterGrid() {
                     {selectedJob.title}
                   </h3>
                   <p className="text-label-sm text-on-surface-variant dark:text-zinc-400 mt-xs">
-                    {selectedJob.department} &bull; {selectedJob.location}
+                    {selectedJob.department}
                   </p>
                 </div>
  

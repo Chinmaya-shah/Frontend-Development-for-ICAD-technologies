@@ -294,15 +294,7 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="story-card lg:col-span-4 bg-surface-container-highest rounded-xl p-lg flex flex-col items-center justify-center text-center dark:bg-primary-container/50">
-                <Globe className="w-12 h-12 text-secondary dark:text-secondary-fixed mb-md" />
-                <h3 className="text-primary dark:text-on-primary font-headline-md text-headline-md mb-xs">45 Countries</h3>
-                <p className="text-on-surface-variant dark:text-on-primary-container/80 font-label-md">
-                  Active operations worldwide
-                </p>
-              </div>
-
-              <div className="story-card lg:col-span-8 h-64 rounded-xl overflow-hidden relative group">
+              <div className="story-card lg:col-span-12 h-64 rounded-xl overflow-hidden relative group">
                 <ParallaxImage
                   src="/images/about_mission.png"
                   alt="High-tech mission control center dashboard"
