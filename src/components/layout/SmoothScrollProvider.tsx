@@ -1,11 +1,15 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function SmoothScrollProvider({ children }: { children: React.ReactNode }) {
+  const lenisRef = useRef<Lenis | null>(null);
+  const pathname = usePathname();
+
   useEffect(() => {
     // Register ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
@@ -20,6 +24,8 @@ export default function SmoothScrollProvider({ children }: { children: React.Rea
       wheelMultiplier: 1,
       touchMultiplier: 2,
     });
+
+    lenisRef.current = lenis;
 
     // Synchronize Lenis scrolling with ScrollTrigger
     lenis.on("scroll", () => {
@@ -80,6 +86,26 @@ export default function SmoothScrollProvider({ children }: { children: React.Rea
       gsap.ticker.remove(update);
     };
   }, []);
+
+  // Handle scrolling to URL hash on initial load and route changes
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      // Small timeout to allow Next.js route transition and DOM layouts to settle
+      const timer = setTimeout(() => {
+        const targetElement = document.querySelector(hash);
+        if (targetElement && lenisRef.current) {
+          lenisRef.current.scrollTo(targetElement as HTMLElement, {
+            offset: -100, // Account for fixed navbar height
+            duration: 1.2,
+            immediate: false,
+          });
+        }
+      }, 250);
+
+      return () => clearTimeout(timer);
+    }
+  }, [pathname]);
 
   return <>{children}</>;
 }
