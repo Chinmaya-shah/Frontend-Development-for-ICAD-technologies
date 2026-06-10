@@ -151,7 +151,7 @@ export default function HeroSection({
               <div className="flex gap-lg pt-md">
                 {metrics.map((m, idx) => (
                   <div key={idx} className="hero-metric border-l-2 border-secondary pl-sm">
-                    <div className="text-headline-lg font-bold text-white">
+                    <div className="text-2xl md:text-3xl font-bold text-white">
                       <MetricCounter value={m.value} />
                     </div>
                     <div className="text-label-sm text-zinc-400 uppercase">
@@ -236,7 +236,7 @@ export default function HeroSection({
             <div className="flex gap-lg pt-md">
               {metrics.map((m, idx) => (
                 <div key={idx} className="hero-metric border-l-2 border-secondary pl-sm">
-                  <div className="text-headline-lg font-bold text-primary">
+                  <div className="text-2xl md:text-3xl font-bold text-primary">
                     <MetricCounter value={m.value} />
                   </div>
                   <div className="text-label-sm text-on-surface-variant uppercase">
