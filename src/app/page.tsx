@@ -226,26 +226,7 @@ export default function HomePage() {
       }
     );
 
-    // Presence Map & Text
-    const mapTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".presence-section",
-        start: "top 85%",
-        toggleActions: "play none none none",
-      },
-    });
 
-    mapTl.fromTo(
-      ".presence-text",
-      { opacity: 0, x: -40 },
-      { opacity: 1, x: 0, duration: 0.8, ease: "power3.out" }
-    );
-    mapTl.fromTo(
-      ".presence-map",
-      { opacity: 0, scale: 0.98 },
-      { opacity: 1, scale: 1, duration: 1.0, ease: "power3.out" },
-      "-=0.6"
-    );
 
     // Horizontal Scroll Roadmap Animation
     const roadmapSection = pageRef.current?.querySelector(".roadmap-section");
@@ -274,6 +255,8 @@ export default function HomePage() {
 
   return (
     <div ref={pageRef}>
+      <title>ICAD Technologies | Global Excellence in Tech Consulting</title>
+      <meta name="description" content="Strategic tech consulting, cloud transformation, zero-trust cybersecurity, custom software engineering, and AI solutions for enterprise leaders." />
       <Navbar />
       <main className="flex-1 mt-20">
         {/* Hero Section */}
@@ -285,7 +268,7 @@ export default function HomePage() {
           heroImageAlt="A futuristic, high-end corporate glass architecture building with clean lines and reflective surfaces."
           primaryBtnText="Explore Solutions"
           primaryBtnLink="/services"
-          secondaryBtnText="Our Offices"
+          secondaryBtnText="About Us"
           secondaryBtnLink="/about"
         />
 
@@ -568,7 +551,7 @@ export default function HomePage() {
 
               <div className="impact-card p-md xl:p-lg neumorphic-raised rounded hover:scale-[1.02] active:scale-[0.98] transition-all duration-300">
                 <div className="text-metric-value font-display-lg text-primary dark:text-on-primary font-bold mb-xs">
-                  <MetricCounter value="300%" />
+                  <MetricCounter value="100%" />
                 </div>
                 <h4 className="text-headline-md font-headline-md text-secondary mb-2">
                   Organic Traffic
@@ -770,47 +753,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Operational Presence Map */}
-        <section className="presence-section py-xl px-margin-mobile md:px-margin-desktop bg-white dark:bg-primary/20 border-t border-outline/30" data-cursor-guide="Operational Presence - Connecting our global ops hubs">
-          <div className="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center gap-lg">
-            <div className="presence-text lg:w-1/2 space-y-md">
-              <h2 className="text-headline-lg font-headline-lg text-primary dark:text-on-primary">
-                Operational Presence
-              </h2>
-              <p className="text-body-lg text-on-surface-variant dark:text-on-primary-container/85">
-                Headquartered in our main Technology Center, with regional engineering hubs and development offices. We provide localized expertise with delivery capabilities across all enterprise sectors.
-              </p>
-              <div className="space-y-sm pt-sm">
-                <div className="flex items-center gap-4">
-                  <div className="w-2.5 h-2.5 rounded-full bg-secondary"></div>
-                  <span className="font-bold text-primary dark:text-on-primary">Technology Headquarters:</span>
-                  <span className="text-on-surface-variant dark:text-on-primary-container/80">Main Operations Hub</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-2.5 h-2.5 rounded-full bg-secondary"></div>
-                  <span className="font-bold text-primary dark:text-on-primary">Research & Innovation:</span>
-                  <span className="text-on-surface-variant dark:text-on-primary-container/80">Innovation Lab</span>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-2.5 h-2.5 rounded-full bg-secondary"></div>
-                  <span className="font-bold text-primary dark:text-on-primary">Engineering Sector:</span>
-                  <span className="text-on-surface-variant dark:text-on-primary-container/80">Development Centers</span>
-                </div>
-              </div>
-            </div>
-            <div className="presence-map lg:w-1/2 w-full h-[400px] bg-surface-container-low rounded relative shadow-none overflow-hidden border border-outline dark:bg-primary-container/30">
-              <ParallaxImage
-                src="/images/about_office.png"
-                alt="Stylized map showing our operations hubs"
-                className="w-full h-full opacity-80 dark:opacity-40"
-                imgClassName="hover:scale-102 transition-transform duration-700"
-              />
-              <div className="absolute top-[48%] left-[32%] w-3.5 h-3.5 bg-secondary rounded-full animate-ping"></div>
-              <div className="absolute top-[28%] right-[28%] w-3.5 h-3.5 bg-secondary rounded-full animate-ping"></div>
-              <div className="absolute bottom-[35%] left-[23%] w-3.5 h-3.5 bg-secondary rounded-full animate-ping"></div>
-            </div>
-          </div>
-        </section>
+
 
         {/* Final CTA */}
         <CTASection />

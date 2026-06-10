@@ -85,7 +85,7 @@ export const servicesData: Record<string, ServiceData> = {
     challenges: [
       { title: "Latency Attrition", desc: "Every minimal latency of delay impacts conversion by 7%. We eliminate bottlenecks through edge delivery and hydration optimization.", icon: "speed" },
       { title: "Device Diversity", desc: "Ensuring consistent logic across thousands of+ device profiles requires a fluid, component-driven architectural mindset.", icon: "mobile_friendly" },
-      { title: "Security Integrity", desc: "Protecting user data isn't a feature; it's a foundation. Our builds integrate Compliant compliance and zero-trust protocols.", icon: "security" }
+      { title: "Security Integrity", desc: "Protecting user data isn't a feature; it's a foundation. Our builds integrate rigorous security compliance and zero-trust protocols.", icon: "security" }
     ],
     approachTitle: "The ICAD Full-stack Approach",
     bentoItems: [
@@ -428,7 +428,7 @@ export const servicesData: Record<string, ServiceData> = {
     heroImageAlt: "High performance processor pulsing with secure red light circuits.",
     metrics: [
       { value: "Absolute", label: "Threat Mitigation" },
-      { value: "Compliant", label: "Certified Framework" }
+      { value: "Compliant", label: "Aligned Framework" }
     ],
     challengesTitle: "The Cost of a Breach",
     challengesDesc: "As systems open up, attack surfaces expand. Security can't be added later; it must be built in.",
@@ -442,7 +442,7 @@ export const servicesData: Record<string, ServiceData> = {
     competenciesTitle: "Security Competencies",
     competencies: [
       { title: "Penetration Testing", desc: "Simulating attacks to locate and resolve potential entry points before exploits occur.", icon: "bolt" },
-      { title: "Compliance Mapping", desc: "Preparing infrastructures to satisfy Compliant, Compliant, and Compliant regulatory requirements.", icon: "admin_panel_settings" }
+      { title: "Compliance Mapping", desc: "Preparing infrastructures to satisfy rigorous regulatory and compliance requirements.", icon: "admin_panel_settings" }
     ],
     techStackTitle: "Security Stack",
     techStack: ["Vault", "Okta", "WAF", "SIEM Tools", "AWS GuardDuty", "SonarQube"],
@@ -513,7 +513,7 @@ export const servicesData: Record<string, ServiceData> = {
     heroImage: "/images/growth_metrics.png",
     heroImageAlt: "Glowing interactive database visualization panels and charts.",
     metrics: [
-      { value: "100M+", label: "Processed Rows/Day" },
+      { value: "1M+", label: "Processed Rows/Day" },
       { value: "Real-time", label: "Latency Rates" }
     ],
     challengesTitle: "Siloed Corporate Data",
@@ -551,7 +551,7 @@ export const servicesData: Record<string, ServiceData> = {
     heroImage: "/images/seo.png",
     heroImageAlt: "Visualizing search metrics and rising chart paths.",
     metrics: [
-      { value: "300%", label: "Average Traffic Boost" },
+      { value: "100%", label: "Average Traffic Boost" },
       { value: "No. 1", label: "Ranking Goals" }
     ],
     challengesTitle: "The Search Competition",

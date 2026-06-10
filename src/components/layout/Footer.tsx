@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Handshake, Code } from "lucide-react";
+import { Handshake, Network } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -110,7 +110,7 @@ export default function Footer() {
                 href="/about"
                 className="text-on-surface-variant dark:text-on-primary-container/80 hover:text-secondary hover:underline transition-all text-label-sm font-label-sm"
               >
-                Offices
+                About Us
               </Link>
             </li>
             <li>
@@ -126,12 +126,12 @@ export default function Footer() {
                 href="/blog"
                 className="text-on-surface-variant dark:text-on-primary-container/80 hover:text-secondary hover:underline transition-all text-label-sm font-label-sm"
               >
-                Press Room
+                Blogs
               </Link>
             </li>
             <li>
               <Link
-                href="#"
+                href="/privacy"
                 className="text-on-surface-variant dark:text-on-primary-container/80 hover:text-secondary hover:underline transition-all text-label-sm font-label-sm"
               >
                 Privacy Policy
@@ -172,18 +172,20 @@ export default function Footer() {
             <Link href="/privacy" className="hover:text-secondary">
               Privacy
             </Link>
-            <Link href="#" className="hover:text-secondary">
+            <Link href="/terms" className="hover:text-secondary">
               Terms
             </Link>
           </div>
           
-          {/* Circular Pill Widget holding Code Icon */}
+          {/* Circular Pill Widget holding Sitemap Icon */}
           <Link
-            href="#"
+            href="/sitemap.xml"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-8 h-8 rounded-full border border-outline dark:border-outline-variant/30 bg-surface/60 dark:bg-primary-container/30 p-1.5 flex items-center justify-center hover:border-secondary hover:text-secondary transition-all"
-            title="Source View"
+            title="Sitemap"
           >
-            <Code className="w-4 h-4 text-on-surface-variant dark:text-on-primary-container/70 hover:text-secondary" />
+            <Network className="w-4 h-4 text-on-surface-variant dark:text-on-primary-container/70 hover:text-secondary" />
           </Link>
         </div>
       </div>
