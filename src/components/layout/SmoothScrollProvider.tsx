@@ -26,6 +26,34 @@ export default function SmoothScrollProvider({ children }: { children: React.Rea
       ScrollTrigger.update();
     });
 
+    // Intercept anchor hash link click events for smooth Lenis scrolling
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest("a");
+      
+      if (anchor) {
+        const href = anchor.getAttribute("href");
+        if (href && href.startsWith("#")) {
+          if (href === "#") {
+            e.preventDefault();
+            lenis.scrollTo(0, { duration: 1.2 });
+            return;
+          }
+          
+          const targetElement = document.querySelector(href);
+          if (targetElement) {
+            e.preventDefault();
+            lenis.scrollTo(targetElement as HTMLElement, {
+              offset: -100, // Account for fixed height navbar header (~80px + padding)
+              duration: 1.2,
+            });
+          }
+        }
+      }
+    };
+
+    document.addEventListener("click", handleAnchorClick);
+
     // Integrate Lenis RAF loop with GSAP ticker
     const update = (time: number) => {
       lenis.raf(time * 1000);
@@ -46,6 +74,7 @@ export default function SmoothScrollProvider({ children }: { children: React.Rea
     }
 
     return () => {
+      document.removeEventListener("click", handleAnchorClick);
       resizeObserver.disconnect();
       lenis.destroy();
       gsap.ticker.remove(update);

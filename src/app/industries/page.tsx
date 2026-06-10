@@ -61,6 +61,8 @@ export default function IndustriesOverviewPage() {
 
   return (
     <div ref={pageRef}>
+      <title>Industry Verticals & Sector Specializations | ICAD Technologies</title>
+      <meta name="description" content="Learn how ICAD Technologies tailors enterprise tech frameworks for key sectors: Financial Services (FinTech), Smart IoT Manufacturing, Logistics, and Compliant Healthcare Networks." />
       <Navbar />
       <main className="flex-1 mt-20">
         {/* Hero Section */}

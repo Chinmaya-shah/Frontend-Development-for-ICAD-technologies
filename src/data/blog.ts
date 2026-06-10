@@ -140,5 +140,215 @@ export const blogArticles: Record<string, BlogArticle> = {
       </p>
     `,
     relatedSlugs: ["the-future-of-ai-in-enterprise-infrastructure", "navigating-multi-cloud-complexity-in-2025"]
+  },
+  "unlocking-generative-ai-for-core-banking": {
+    slug: "unlocking-generative-ai-for-core-banking",
+    title: "Unlocking Generative AI for Core Banking",
+    category: "FinTech",
+    tagline: "FINTECH INNOVATION",
+    readTime: "9 min read",
+    date: "December 05, 2024",
+    authorName: "AI & Cloud Engineering",
+    authorTitle: "Systems Integration Division",
+    authorImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2318181b'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23ff4b2b' stroke-width='4'/%3E%3Cpath d='M50 35 L50 65 M35 50 L65 50' stroke='%23ff4b2b' stroke-width='4'/%3E%3C/svg%3E",
+    authorBio: "The AI & Cloud Engineering division designs and deploys next-generation cloud architectures, multi-region Kubernetes topologies, and automated data pipelines.",
+    coverImage: "/images/leader_ai.png",
+    coverImageAlt: "Algorithmic artificial neural network visualization.",
+    excerpt: "How financial institutions are integrating specialized LLMs and Retrieval-Augmented Generation (RAG) to automate customer support and transaction queries.",
+    contentHtml: `
+      <p class="text-body-lg font-body-lg text-on-surface-variant mb-xl leading-relaxed">
+        Generative AI is unlocking massive capabilities for modern banking. By loading compliance guidelines and historic data logs into private vector spaces (RAG), banks resolve complex transaction inquiries securely in real-time.
+      </p>
+    `,
+    relatedSlugs: ["the-future-of-ai-in-enterprise-infrastructure", "zero-trust-beyond-the-buzzword"]
+  },
+  "securing-the-modern-software-supply-chain": {
+    slug: "securing-the-modern-software-supply-chain",
+    title: "Securing the Modern Software Supply Chain",
+    category: "Cybersecurity",
+    tagline: "SUPPLY CHAIN DEFENSE",
+    readTime: "11 min read",
+    date: "November 28, 2024",
+    authorName: "SecOps & Cybersecurity Division",
+    authorTitle: "Security & Network Compliance",
+    authorImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2318181b'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23ff4b2b' stroke-width='4'/%3E%3Cpath d='M50 35 L50 65 M35 50 L65 50' stroke='%23ff4b2b' stroke-width='4'/%3E%3C/svg%3E",
+    authorBio: "The SecOps division focuses on defense-grade infrastructure hardening, threat intelligence, continuous auditing, and zero-trust protocol modeling.",
+    coverImage: "/images/cybersecurity.png",
+    coverImageAlt: "Silicon chip architecture glowing with red light circuits.",
+    excerpt: "A technical analysis of software bill of materials (SBOM) and container signature validation inside automated CI/CD deployment pipelines.",
+    contentHtml: `
+      <p class="text-body-lg font-body-lg text-on-surface-variant mb-xl leading-relaxed">
+        Attack vectors have shifted from production applications back to the development pipelines. Defending corporate networks requires scanning open-source package dependencies dynamically and validating signatures on every commit container.
+      </p>
+    `,
+    relatedSlugs: ["zero-trust-beyond-the-buzzword", "building-resilient-multi-region-kubernetes-topologies"]
+  },
+  "the-economics-of-digital-twins-in-logistics": {
+    slug: "the-economics-of-digital-twins-in-logistics",
+    title: "The Economics of Digital Twins in Logistics",
+    category: "Logistics",
+    tagline: "LOGISTICS TECH",
+    readTime: "7 min read",
+    date: "November 14, 2024",
+    authorName: "AI & Cloud Engineering",
+    authorTitle: "Systems Integration Division",
+    authorImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2318181b'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23ff4b2b' stroke-width='4'/%3E%3Cpath d='M50 35 L50 65 M35 50 L65 50' stroke='%23ff4b2b' stroke-width='4'/%3E%3C/svg%3E",
+    authorBio: "The AI & Cloud Engineering division designs and deploys next-generation cloud architectures, multi-region Kubernetes topologies, and automated data pipelines.",
+    coverImage: "/images/cloud_architecture.png",
+    coverImageAlt: "Global logistics tracking map visual.",
+    excerpt: "How dynamic real-world environment mapping and route simulations are reducing freight overheads by 15% across global ports.",
+    contentHtml: `
+      <p class="text-body-lg font-body-lg text-on-surface-variant mb-xl leading-relaxed">
+        Logistics networks are highly vulnerable to bottlenecks. By creating dynamic digital twin simulations, fleet administrators identify congestion points in advance, saving millions in transit expenses.
+      </p>
+    `,
+    relatedSlugs: ["edge-computing-the-new-frontier", "navigating-multi-cloud-complexity-in-2025"]
+  },
+  "designing-design-systems-bridging-figma-and-tailwind": {
+    slug: "designing-design-systems-bridging-figma-and-tailwind",
+    title: "Designing Design Systems: Bridging Figma and Tailwind",
+    category: "UI/UX Design",
+    tagline: "DESIGN ARCHITECTURE",
+    readTime: "8 min read",
+    date: "November 02, 2024",
+    authorName: "ICAD Systems Lab",
+    authorTitle: "Research & Advanced Infrastructure",
+    authorImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2318181b'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23ff4b2b' stroke-width='4'/%3E%3Cpath d='M50 35 L50 65 M35 50 L65 50' stroke='%23ff4b2b' stroke-width='4'/%3E%3C/svg%3E",
+    authorBio: "The ICAD Systems Lab conducts advanced research into high-performance computing architectures, autonomous workloads, and enterprise hardware orchestration.",
+    coverImage: "/images/ui_ux_design.png",
+    coverImageAlt: "Clean, responsive Figma UI canvas with grid layouts.",
+    excerpt: "Best practices for aligning Figma design tokens with Tailwind utility variables to accelerate frontend development velocity.",
+    contentHtml: `
+      <p class="text-body-lg font-body-lg text-on-surface-variant mb-xl leading-relaxed">
+        Building high-fidelity pages quickly requires unified tokens. Translating core design variables directly into Tailwind configs simplifies changes and keeps styles consistent.
+      </p>
+    `,
+    relatedSlugs: ["the-roi-of-sustainable-tech-innovation", "search-engine-digitization-the-core-web-vitals-audit"]
+  },
+  "building-resilient-multi-region-kubernetes-topologies": {
+    slug: "building-resilient-multi-region-kubernetes-topologies",
+    title: "Building Resilient Multi-Region Kubernetes Topologies",
+    category: "Cloud Architecture",
+    tagline: "CLOUD INFRASTRUCTURE",
+    readTime: "14 min read",
+    date: "October 30, 2024",
+    authorName: "AI & Cloud Engineering",
+    authorTitle: "Systems Integration Division",
+    authorImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2318181b'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23ff4b2b' stroke-width='4'/%3E%3Cpath d='M50 35 L50 65 M35 50 L65 50' stroke='%23ff4b2b' stroke-width='4'/%3E%3C/svg%3E",
+    authorBio: "The AI & Cloud Engineering division designs and deploys next-generation cloud architectures, multi-region Kubernetes topologies, and automated data pipelines.",
+    coverImage: "/images/about_mission.png",
+    coverImageAlt: "Abstract networking layout with servers.",
+    excerpt: "A step-by-step architectural blueprint to configure Anycast routing, global load balancing, and active-active DB clustering.",
+    contentHtml: `
+      <p class="text-body-lg font-body-lg text-on-surface-variant mb-xl leading-relaxed">
+        True disaster recovery demands independent multi-region architectures. We configure Anycast routing to automatically distribute client queries to the nearest online cluster, keeping systems live.
+      </p>
+    `,
+    relatedSlugs: ["navigating-multi-cloud-complexity-in-2025", "edge-computing-the-new-frontier"]
+  },
+  "optimizing-shop-floor-efficiency-with-iot-mesh-networks": {
+    slug: "optimizing-shop-floor-efficiency-with-iot-mesh-networks",
+    title: "Optimizing Shop-Floor Efficiency with IoT Mesh Networks",
+    category: "Manufacturing",
+    tagline: "INDUSTRY 4.0",
+    readTime: "10 min read",
+    date: "October 12, 2024",
+    authorName: "AI & Cloud Engineering",
+    authorTitle: "Systems Integration Division",
+    authorImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2318181b'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23ff4b2b' stroke-width='4'/%3E%3Cpath d='M50 35 L50 65 M35 50 L65 50' stroke='%23ff4b2b' stroke-width='4'/%3E%3C/svg%3E",
+    authorBio: "The AI & Cloud Engineering division designs and deploys next-generation cloud architectures, multi-region Kubernetes topologies, and automated data pipelines.",
+    coverImage: "/images/enterprise_erp.png",
+    coverImageAlt: "Industrial automated warehouse with robotic arms.",
+    excerpt: "How industrial manufacturers are deploying localized Bluetooth and Thread mesh routers to maintain telemetry streams during network cuts.",
+    contentHtml: `
+      <p class="text-body-lg font-body-lg text-on-surface-variant mb-xl leading-relaxed">
+        Manufacturing environments present heavy radio obstacles. Deploying local mesh architectures ensures sensor telemetry reaches edge decoders even during primary router downtime.
+      </p>
+    `,
+    relatedSlugs: ["edge-computing-the-new-frontier", "the-roi-of-sustainable-tech-innovation"]
+  },
+  "fhir-protocols-the-future-of-medical-data-interoperability": {
+    slug: "fhir-protocols-the-future-of-medical-data-interoperability",
+    title: "FHIR Protocols: The Future of Medical Data Interoperability",
+    category: "Healthcare",
+    tagline: "HEALTHCARE TECH",
+    readTime: "12 min read",
+    date: "October 05, 2024",
+    authorName: "ICAD Systems Lab",
+    authorTitle: "Research & Advanced Infrastructure",
+    authorImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2318181b'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23ff4b2b' stroke-width='4'/%3E%3Cpath d='M50 35 L50 65 M35 50 L65 50' stroke='%23ff4b2b' stroke-width='4'/%3E%3C/svg%3E",
+    authorBio: "The ICAD Systems Lab conducts advanced research into high-performance computing architectures, autonomous workloads, and enterprise hardware orchestration.",
+    coverImage: "/images/about_office.png",
+    coverImageAlt: "Modern glass office building structure.",
+    excerpt: "Why standardized JSON APIs for electronic health records (EHR) are replacing fragmented medical systems and safeguarding patient privacy.",
+    contentHtml: `
+      <p class="text-body-lg font-body-lg text-on-surface-variant mb-xl leading-relaxed">
+        Patient care is frequently delayed by fragmented databases. Adopting FHIR API protocols allows secure records exchange while maintaining complete user privacy controls.
+      </p>
+    `,
+    relatedSlugs: ["the-roi-of-sustainable-tech-innovation", "zero-trust-beyond-the-buzzword"]
+  },
+  "mastering-devops-pipelines-zero-downtime-hot-deployments": {
+    slug: "mastering-devops-pipelines-zero-downtime-hot-deployments",
+    title: "Mastering DevOps Pipelines: Zero-Downtime Hot Deployments",
+    category: "DevOps",
+    tagline: "AUTOMATION PIPELINES",
+    readTime: "9 min read",
+    date: "September 20, 2024",
+    authorName: "AI & Cloud Engineering",
+    authorTitle: "Systems Integration Division",
+    authorImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2318181b'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23ff4b2b' stroke-width='4'/%3E%3Cpath d='M50 35 L50 65 M35 50 L65 50' stroke='%23ff4b2b' stroke-width='4'/%3E%3C/svg%3E",
+    authorBio: "The AI & Cloud Engineering division designs and deploys next-generation cloud architectures, multi-region Kubernetes topologies, and automated data pipelines.",
+    coverImage: "/images/software_engineering.png",
+    coverImageAlt: "Clean software coding panels on high-res monitors.",
+    excerpt: "A practical guide to configuring canary releases, blue-green environments, and automated rollback configurations.",
+    contentHtml: `
+      <p class="text-body-lg font-body-lg text-on-surface-variant mb-xl leading-relaxed">
+        Deploying software shouldn't require system maintenance windows. By using progressive rollouts, traffic shifts safely to new clusters, rolling back instantly if error rates spike.
+      </p>
+    `,
+    relatedSlugs: ["navigating-multi-cloud-complexity-in-2025", "building-resilient-multi-region-kubernetes-topologies"]
+  },
+  "search-engine-digitization-the-core-web-vitals-audit": {
+    slug: "search-engine-digitization-the-core-web-vitals-audit",
+    title: "Search Engine Digitization: The Core Web Vitals Audit",
+    category: "SEO & Marketing",
+    tagline: "SEO OPTIMIZATION",
+    readTime: "10 min read",
+    date: "September 08, 2024",
+    authorName: "ICAD Systems Lab",
+    authorTitle: "Research & Advanced Infrastructure",
+    authorImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2318181b'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23ff4b2b' stroke-width='4'/%3E%3Cpath d='M50 35 L50 65 M35 50 L65 50' stroke='%23ff4b2b' stroke-width='4'/%3E%3C/svg%3E",
+    authorBio: "The ICAD Systems Lab conducts advanced research into high-performance computing architectures, autonomous workloads, and enterprise hardware orchestration.",
+    coverImage: "/images/growth_metrics.png",
+    coverImageAlt: "Analytics charts showing user activity indicators.",
+    excerpt: "How dynamic layout shifts (CLS) and interaction to next paint (INP) directly affect search positions and customer conversion rates.",
+    contentHtml: `
+      <p class="text-body-lg font-body-lg text-on-surface-variant mb-xl leading-relaxed">
+        Search engines heavily penalize slow layout responses. Running page diagnostics and optimizing browser paint parameters helps improve keyword indexing while cutting visitor bounce rates.
+      </p>
+    `,
+    relatedSlugs: ["designing-design-systems-bridging-figma-and-tailwind", "the-roi-of-sustainable-tech-innovation"]
+  },
+  "legacy-modernization-breaking-the-monolith": {
+    slug: "legacy-modernization-breaking-the-monolith",
+    title: "Legacy Modernization: Breaking the Monolith",
+    category: "IT Consulting",
+    tagline: "LEGACY TRANSFORMATION",
+    readTime: "13 min read",
+    date: "August 28, 2024",
+    authorName: "ICAD Systems Lab",
+    authorTitle: "Research & Advanced Infrastructure",
+    authorImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%2318181b'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%23ff4b2b' stroke-width='4'/%3E%3Cpath d='M50 35 L50 65 M35 50 L65 50' stroke='%23ff4b2b' stroke-width='4'/%3E%3C/svg%3E",
+    authorBio: "The ICAD Systems Lab conducts advanced research into high-performance computing architectures, autonomous workloads, and enterprise hardware orchestration.",
+    coverImage: "/images/it_consulting.png",
+    coverImageAlt: "IT roadmap blueprint meeting boards.",
+    excerpt: "A strategic transformation roadmap for corporate advisors to slowly split legacy systems into microservices securely.",
+    contentHtml: `
+      <p class="text-body-lg font-body-lg text-on-surface-variant mb-xl leading-relaxed">
+        Legacy software restricts operational speed. Migrating away from monolithes demands step-by-step extraction workflows (Strangler Fig patterns) rather than risky full rewrites, keeping existing services online during translation.
+      </p>
+    `,
+    relatedSlugs: ["the-future-of-ai-in-enterprise-infrastructure", "designing-design-systems-bridging-figma-and-tailwind"]
   }
 };

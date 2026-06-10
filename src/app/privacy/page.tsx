@@ -40,6 +40,8 @@ export default function PrivacyPage() {
 
   return (
     <div ref={containerRef}>
+      <title>Privacy Policy | ICAD Technologies</title>
+      <meta name="description" content="Learn how ICAD Technologies handles, protects, and governs your corporate data and intellectual assets in our zero-trust ecosystem." />
       <Navbar />
       <main className="flex-1 mt-20 pb-xl bg-surface dark:bg-zinc-950">
         {/* Hero Banner */}

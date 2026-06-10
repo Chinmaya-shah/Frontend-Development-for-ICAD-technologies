@@ -120,6 +120,8 @@ export default function ServicesPage() {
 
   return (
     <div ref={pageRef}>
+      <title>Enterprise Technology Services & Solutions | ICAD Technologies</title>
+      <meta name="description" content="Explore ICAD Technologies' services: Web/Mobile Development, Custom ERP/CRM Solutions, AI/ML Integrations, Cloud Infrastructure, Cybersecurity, and Managed Edge Hosting." />
       <Navbar />
       <main className="flex-1 mt-20">
         {/* Hero Section */}

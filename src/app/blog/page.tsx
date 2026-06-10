@@ -11,6 +11,8 @@ export default function BlogPage() {
 
   return (
     <>
+      <title>Enterprise Technology Blog & Insights | ICAD Technologies</title>
+      <meta name="description" content="Explore in-depth technical guides, strategic research, and expert insights on cloud architecture, cybersecurity, machine learning, and devops." />
       <Navbar />
       <main className="flex-1 mt-20">
         {/* Featured Article Hero Banner */}

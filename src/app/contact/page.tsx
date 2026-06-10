@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { Phone, Mail, Calendar, MapPin, Check } from "lucide-react";
+import { Phone, Mail, Calendar, Check } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
@@ -15,32 +15,11 @@ if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-interface Office {
-  name: string;
-  address: string;
-  hours: string;
-  lat: string;
-  lng: string;
-  markerTop: string;
-  markerLeft: string;
-}
 
-const offices: Office[] = [
-  {
-    name: "Corporate Office",
-    address: "Central Tech Park, Tech Sector",
-    hours: "Daily Operations",
-    lat: "North",
-    lng: "East",
-    markerTop: "42%",
-    markerLeft: "52%",
-  }
-];
 
 export default function ContactPage() {
   const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
-  const [selectedOffice, setSelectedOffice] = useState<number>(0);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -71,16 +50,15 @@ export default function ContactPage() {
     );
 
     gsap.fromTo(
-      ".contact-map-section, .contact-cta-section",
+      ".contact-cta-section",
       { opacity: 0, scale: 0.99 },
       {
         opacity: 1,
         scale: 1,
         duration: 0.8,
         ease: "power3.out",
-        stagger: 0.15,
         scrollTrigger: {
-          trigger: ".contact-map-section",
+          trigger: ".contact-cta-section",
           start: "top 90%",
           toggleActions: "play none none none",
         },
@@ -150,12 +128,14 @@ export default function ContactPage() {
 
   return (
     <div ref={containerRef}>
+      <title>Contact Our Solutions Architects | ICAD Technologies</title>
+      <meta name="description" content="Reach out to ICAD Technologies' legal, talent acquisition, or technical departments. Speak to a solutions architect about cloud, security, or enterprise development." />
       <Navbar />
       <main className="pt-28 pb-xl px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto space-y-xl">
         {/* Hero Section */}
         <header className="contact-header text-center md:text-left space-y-sm" data-cursor-guide="Contact Us - Connect with our specialized teams">
           <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-on-primary">
-            Corporate Presence. Strategic Expertise.
+            Strategic Expertise. Seamless Collaboration.
           </h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant dark:text-on-primary-container/85 max-w-2xl">
             Connect with our specialized teams to drive your technological transformation forward.
@@ -262,17 +242,7 @@ export default function ContactPage() {
                     <Mail className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
-                    <p className="text-label-sm font-label-sm text-on-surface-variant dark:text-on-primary-container/70">Corporate Office</p>
-                    <p className="text-body-lg font-bold text-primary dark:text-on-primary">info@icadtechnologies.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-md">
-                  <div className="w-10 h-10 rounded-full bg-surface-container-high dark:bg-primary flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-secondary" />
-                  </div>
-                  <div>
-                    <p className="text-label-sm font-label-sm text-on-surface-variant dark:text-on-primary-container/70">Media Relations</p>
+                    <p className="text-label-sm font-label-sm text-on-surface-variant dark:text-on-primary-container/70">General Support</p>
                     <p className="text-body-lg font-bold text-primary dark:text-on-primary">info@icadtechnologies.com</p>
                   </div>
                 </div>
@@ -283,72 +253,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Corporate Map - Full Width */}
-        <section className="contact-map-section bg-white dark:bg-primary-container/40 rounded-xl shadow-lg border border-outline-variant dark:border-primary-fixed-dim/20 overflow-hidden" data-cursor-guide="Corporate Presence - Trace our physical offices">
-          <div className="grid grid-cols-1 lg:grid-cols-3">
-            {/* List side */}
-            <div className="p-lg border-b lg:border-b-0 lg:border-r border-outline-variant dark:border-primary-fixed-dim/20 space-y-md">
-              <h3 className="font-headline-lg text-headline-lg text-primary dark:text-on-primary">
-                Corporate Location
-              </h3>
-              <div className="space-y-md max-h-[400px] overflow-y-auto pr-sm scrollbar-thin">
-                {offices.map((office, idx) => (
-                  <div
-                    key={idx}
-                    onClick={() => setSelectedOffice(idx)}
-                    className={`p-md rounded-lg border-l-4 cursor-pointer transition-all ${
-                      selectedOffice === idx
-                        ? "border-secondary bg-surface-container-low dark:bg-primary-container"
-                        : "border-outline-variant dark:border-primary-fixed-dim/20 hover:border-secondary hover:bg-surface-container-low/50 dark:hover:bg-primary-container/20"
-                    }`}
-                  >
-                    <p className="font-bold text-primary dark:text-on-primary">{office.name}</p>
-                    <p className="text-label-sm text-on-surface-variant dark:text-on-primary-container/70">{office.address}</p>
-                    <p className={`text-label-sm font-bold mt-xs ${selectedOffice === idx ? "text-secondary dark:text-secondary-fixed" : "text-on-surface-variant/80 dark:text-on-primary-container/60"}`}>
-                      {office.hours}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
 
-            {/* Map side */}
-            <div className="lg:col-span-2 relative h-[500px] overflow-hidden">
-              <ParallaxImage
-                src="/images/about_office.png"
-                alt="Digital visualization showing corporate office node"
-                className="w-full h-full opacity-45 grayscale"
-                imgClassName="hover:scale-105 transition-transform duration-700"
-              />
-              
-              {/* Pulsing Markers */}
-              {offices.map((office, idx) => (
-                <div
-                  key={idx}
-                  onClick={() => setSelectedOffice(idx)}
-                  style={{ top: office.markerTop, left: office.markerLeft }}
-                  className={`absolute w-6 h-6 -translate-x-1/2 -translate-y-1/2 rounded-full cursor-pointer flex items-center justify-center transition-all duration-300 ${
-                    selectedOffice === idx ? "scale-125 z-10" : "scale-100 z-0"
-                  }`}
-                >
-                  <span className={`absolute inline-flex h-full w-full rounded-full opacity-75 animate-ping ${
-                    selectedOffice === idx ? "bg-secondary" : "bg-red-400/50"
-                  }`}></span>
-                  <span className={`relative inline-flex rounded-full h-3.5 w-3.5 ${
-                    selectedOffice === idx ? "bg-secondary" : "bg-red-500"
-                  }`}></span>
-                  
-                  {/* Tooltip for map markers */}
-                  {selectedOffice === idx && (
-                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bg-slate-950 text-white text-xs font-bold py-1.5 px-3 rounded shadow-lg whitespace-nowrap border border-white/10 z-20">
-                      {office.name}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Calendar Integration Section */}
         <section className="contact-cta-section bg-primary text-on-primary p-lg rounded-xl flex flex-col md:flex-row items-center justify-between gap-lg" data-cursor-guide="Consultation Booking - Reserve a briefing session directly">

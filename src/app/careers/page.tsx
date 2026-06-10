@@ -118,6 +118,8 @@ export default function CareersPage() {
 
   return (
     <div ref={containerRef}>
+      <title>Careers | Join Our Engineering Team | ICAD Technologies</title>
+      <meta name="description" content="Explore opportunities in software engineering, cloud architecture, cybersecurity, and data analytics. Build high-performance solutions with ICAD Technologies." />
       <Navbar />
       <main className="flex-1 mt-20">
         {/* Hero Section */}

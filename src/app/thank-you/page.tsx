@@ -47,6 +47,9 @@ export default function ThankYouPage() {
 
   return (
     <>
+      <title>Inquiry Received | Thank You | ICAD Technologies</title>
+      <meta name="description" content="Thank you for your inquiry. An ICAD Technologies solutions architect will be in touch shortly to review your enterprise scale requirements." />
+      <meta name="robots" content="noindex, nofollow" />
       <Navbar />
       <main className="pt-32 pb-xl px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto space-y-xl">
         
