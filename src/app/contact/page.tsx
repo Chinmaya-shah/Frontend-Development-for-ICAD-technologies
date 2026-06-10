@@ -2,7 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { Phone, Mail, Calendar, Check } from "lucide-react";
+import { Phone, Mail, Check } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Button from "@/components/ui/Button";
@@ -47,22 +47,6 @@ export default function ContactPage() {
       { opacity: 0, y: 45, scale: 0.98 },
       { opacity: 1, y: 0, scale: 1, duration: 0.8, stagger: 0.15 },
       "-=0.6"
-    );
-
-    gsap.fromTo(
-      ".contact-cta-section",
-      { opacity: 0, scale: 0.99 },
-      {
-        opacity: 1,
-        scale: 1,
-        duration: 0.8,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".contact-cta-section",
-          start: "top 90%",
-          toggleActions: "play none none none",
-        },
-      }
     );
   }, { scope: containerRef });
 
@@ -252,45 +236,6 @@ export default function ContactPage() {
 
           </div>
         </div>
-
-
-
-        {/* Calendar Integration Section */}
-        <section className="contact-cta-section bg-primary text-on-primary p-lg rounded-xl flex flex-col md:flex-row items-center justify-between gap-lg" data-cursor-guide="Consultation Booking - Reserve a briefing session directly">
-          <div className="max-w-xl space-y-sm">
-            <h3 className="font-headline-lg text-headline-lg text-white">Book a Consultation</h3>
-            <p className="font-body-md text-body-md text-white/80 leading-relaxed">
-              Skip the email back-and-forth. Schedule a 30-minute introductory call directly with our solutions architects.
-            </p>
-          </div>
-          
-          <div className="flex flex-col gap-md w-full md:w-auto shrink-0">
-            <div className="bg-white dark:bg-primary-container rounded-lg p-md text-on-surface dark:text-on-primary flex flex-col sm:flex-row items-center justify-between gap-md shadow-inner">
-              <div className="flex items-center gap-sm">
-                <Calendar className="w-5 h-5 text-primary dark:text-on-primary-container shrink-0" />
-                <span className="font-label-md font-semibold">Next Available: Today (Afternoon)</span>
-              </div>
-              <Button variant="secondary" size="sm" className="w-full sm:w-auto">
-                Select Time
-              </Button>
-            </div>
-            
-            <div className="flex items-center gap-sm justify-center md:justify-start">
-              <div className="flex -space-x-2">
-                <div className="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-label-sm border-2 border-white dark:border-zinc-900 font-bold shrink-0 shadow-sm">
-                  DS
-                </div>
-                <div className="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center text-label-sm border-2 border-white dark:border-zinc-900 font-bold shrink-0 shadow-sm">
-                  ENG
-                </div>
-                <div className="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center text-label-sm border-2 border-white dark:border-zinc-900 font-bold shrink-0 shadow-sm">
-                  PM
-                </div>
-              </div>
-              <span className="text-white/80 text-label-sm font-semibold">Solutions Architect Team</span>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>
